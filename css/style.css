@@ -1,0 +1,151 @@
+:root {
+  --cyan: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+  --grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+
+  --font-size: 1.125rem;
+  --font-weight-thin: 400; 
+  --font-weight-thick: 700;
+  --font-fam: 'Kumbh Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--cyan);
+}
+
+.container {
+  border-radius: 1rem;
+  max-width: 900px;
+  width: 34%;
+  z-index: 1;
+  font-family: var(--font-fam);
+  font-size: var(--font-size);
+  color: var(--dark-gray);
+  font-weight: var(--font-weight-thin);
+}
+
+h1,
+h2 {
+  color: var(--dark-blue);
+  font-weight: var(--font-weight-thick);
+  font-size: 1.5625rem;
+  margin-top: 2.5rem;
+}
+
+hr {
+  border: 0.5px solid rgba(150, 150, 150, 0.5);
+}
+
+p {
+  margin: 0.625rem 0 2.1875rem;
+}
+
+.bg-circle1,
+.bg-circle2 {
+  position: absolute;
+}
+
+.bg-circle1 {
+  top: -50%;
+  left: -20%;
+}
+
+.bg-circle2 {
+  bottom: -60%;
+  right: -19%
+}
+
+.top-bg {
+  background-image: url('../images/bg-pattern-card.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 9.375rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.main-body {
+  background-color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.main-body img {
+  width: 8.75rem;
+}
+
+.main-body .name {
+  margin-top: 0.9375rem;
+}
+
+.main-body h1 span {
+  color: var(--dark-gray);
+  font-weight: var(--font-weight-thin);
+  margin-left: 0.3125rem;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  border: 0.3125rem solid white;
+  margin-top: -3.125rem;
+}
+
+
+.stats-box {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stats-box p {
+  letter-spacing: 2.0.14375rem;
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 80%;
+  }
+  .bg-circle1 {
+    top: -15.625rem;
+    left: -15.625rem;
+    width: 31.25rem;
+  }
+  .bg-circle2 {
+    bottom: -15.625rem;
+    left: 15.625rem;
+    width: 31.25rem;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.125rem;
+    margin-top: 1.25rem;
+  }
+
+  .main-body img {
+    width: auto;
+  }
+
+  p {
+    font-size: 0.875rem;
+    margin: 0.4375rem 0 1.5625rem
+  }
+  .stats-box p {
+    letter-spacing: 0.125rem;
+    font-size: 0.625rem;
+  }
+}
